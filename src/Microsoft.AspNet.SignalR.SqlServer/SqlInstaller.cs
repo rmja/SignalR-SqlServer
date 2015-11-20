@@ -35,7 +35,7 @@ namespace Microsoft.AspNet.SignalR.SqlServer
                 throw new PlatformNotSupportedException(Resources.Error_UnsupportedSqlEdition);
             }
 
-            var script = GetType().GetTypeInfo().Assembly.StringResource("install.sql");
+            var script = GetType().GetTypeInfo().Assembly.StringResource("Microsoft.AspNet.SignalR.SqlServer.install.sql");
 
             script = script.Replace("SET @SCHEMA_NAME = 'SignalR';", "SET @SCHEMA_NAME = '" + SqlMessageBus.SchemaName + "';");
             script = script.Replace("SET @SCHEMA_TABLE_NAME = 'Schema';", "SET @SCHEMA_TABLE_NAME = '" + SchemaTableName + "';");

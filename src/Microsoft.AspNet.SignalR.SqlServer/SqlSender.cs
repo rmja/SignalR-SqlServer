@@ -29,7 +29,7 @@ namespace Microsoft.AspNet.SignalR.SqlServer
 
         private string BuildInsertString(string tableName)
         {
-            var insertDml = GetType().GetTypeInfo().Assembly.StringResource("send.sql");
+            var insertDml = GetType().GetTypeInfo().Assembly.StringResource("Microsoft.AspNet.SignalR.SqlServer.send.sql");
 
             return insertDml.Replace("[SignalR]", String.Format(CultureInfo.InvariantCulture, "[{0}]", SqlMessageBus.SchemaName))
                             .Replace("[Messages_0", String.Format(CultureInfo.InvariantCulture, "[{0}", tableName));

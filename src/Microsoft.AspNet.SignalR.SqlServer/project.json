@@ -8,7 +8,10 @@
     "warningsAsErrors": true,
     "keyFile": "../../tools/Key.snk"
   },
-  "resources": "install.sql;send.sql",
+  "namedResource": {
+    "Microsoft.AspNet.SignalR.SqlServer.install.sql": "install.sql",
+    "Microsoft.AspNet.SignalR.SqlServer.send.sql": "send.sql"
+  },
   "frameworks": {
     "dnx451": {
       "frameworkAssemblies": {
